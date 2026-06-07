@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 export default function BabyShower() {
   useEffect(() => {
-    window.location.href = 'https://www.paperlesspost.com';
+    window.location.href = 'https://pp.events/bJn5mYv3';
   }, []);
 
   return (
