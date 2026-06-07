@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .heart { fill: #ec4899; }
+    </style>
+  </defs>
+  <path class="heart" d="M50,85 C20,65 5,50 5,38 C5,25 15,18 25,18 C35,18 42,25 50,33 C58,25 65,18 75,18 C85,18 95,25 95,38 C95,50 80,65 50,85 Z"/>
+</svg>

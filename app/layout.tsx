@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ReactNode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Juliette Tran",
   description: "Welcome to Juliette's page",
+  icons: {
+    icon: "/favicon.ico.svg",
+  },
 };
 
 export default function RootLayout({
