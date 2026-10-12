@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   const photos = [
@@ -8,21 +7,14 @@ export default function Home() {
     { src: "/beach_announcement_dad_gang.jpeg", alt: "Beach announcement - dad gang" },
     { src: "/first_ultrasound.jpeg", alt: "First ultrasound" },
     { src: "/ultrasound.jpeg", alt: "Ultrasound" },
+    { src: "/newborn_mom_cuddle.jpeg", alt: "Mom cuddling newborn" },
+    { src: "/newborn_family_selfie.jpeg", alt: "Mom, dad, and newborn" },
+    { src: "/newborn_dad_holding.jpeg", alt: "Dad holding newborn" },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-50 to-pink-100">
       <main className="max-w-4xl mx-auto px-4 py-12 sm:py-20">
-        {/* Baby Shower Link */}
-        <div className="text-center mb-8">
-          <Link
-            href="/babyshower"
-            className="inline-block px-6 py-2 bg-pink-400 text-white rounded-lg font-semibold hover:bg-pink-500 transition-colors shadow-md"
-          >
-            Baby Shower
-          </Link>
-        </div>
-
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl sm:text-6xl font-bold text-pink-600 mb-2">
