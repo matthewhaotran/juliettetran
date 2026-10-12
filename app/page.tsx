@@ -7,6 +7,9 @@ export default function Home() {
     { src: "/beach_announcement_dad_gang.jpeg", alt: "Beach announcement - dad gang" },
     { src: "/first_ultrasound.jpeg", alt: "First ultrasound" },
     { src: "/ultrasound.jpeg", alt: "Ultrasound" },
+    { src: "/newborn_mom_cuddle.jpeg", alt: "Mom cuddling newborn" },
+    { src: "/newborn_family_selfie.jpeg", alt: "Mom, dad, and newborn" },
+    { src: "/newborn_dad_holding.jpeg", alt: "Dad holding newborn" },
   ];
 
   return (
