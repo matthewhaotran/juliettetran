@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Juliette Tran",
+  title: "Juliette Madeline Tran",
   description: "Welcome to Juliette's page",
   icons: {
     icon: "/favicon.ico.svg",
