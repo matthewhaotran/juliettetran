@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Home() {
   const photos = [
-    { src: "/newborn_mom_cuddle.jpeg", alt: "Mom cuddling newborn" },
-    { src: "/newborn_family_selfie.jpeg", alt: "Mom, dad, and newborn" },
-    { src: "/newborn_dad_holding.jpeg", alt: "Dad holding newborn" },
-    { src: "/announcement_cookies.jpeg", alt: "Announcement with cookies" },
-    { src: "/beach_announcement.jpeg", alt: "Beach announcement" },
-    { src: "/beach_announcement_dad_gang.jpeg", alt: "Beach announcement - dad gang" },
-    { src: "/first_ultrasound.jpeg", alt: "First ultrasound" },
-    { src: "/ultrasound.jpeg", alt: "Ultrasound" },
+    { src: "/newborn_mom_cuddle.jpeg", caption: "first photo ever" },
+    { src: "/newborn_family_selfie.jpeg", caption: "first family photo" },
+    { src: "/newborn_dad_holding.jpeg", caption: "first photo with dad" },
+    { src: "/announcement_cookies.jpeg", caption: "baby shower cookies" },
+    { src: "/beach_announcement.jpeg", caption: "Excited for Juliette to come!" },
+    { src: "/beach_announcement_dad_gang.jpeg", caption: "baby announcement" },
+    { src: "/ultrasound.jpeg", caption: "first ultrasound family photo" },
+    { src: "/first_ultrasound.jpeg", caption: "first ultrasound" },
   ];
 
   return (
@@ -29,18 +29,18 @@ export default function Home() {
 
         <div className="grid grid-cols-2 gap-6 sm:gap-8">
           {photos.map((photo) => (
-            <div
-              key={photo.src}
-              className="bg-white p-2 pb-8 shadow-md"
-            >
+            <figure key={photo.src} className="bg-white p-2 pb-4 shadow-md">
               <Image
                 src={photo.src}
-                alt={photo.alt}
+                alt={photo.caption}
                 width={400}
                 height={400}
                 className="w-full h-auto aspect-square object-cover"
               />
-            </div>
+              <figcaption className="mt-3 text-center font-serif italic text-sm text-[#6d5b4c]">
+                {photo.caption}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </main>
