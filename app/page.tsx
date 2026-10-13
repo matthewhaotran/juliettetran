@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f7f1e6] text-[#4a3f36]">
-      <main className="max-w-3xl mx-auto px-4 py-12 sm:py-20">
+      <main className="max-w-5xl mx-auto px-4 py-12 sm:py-20">
         <header className="text-center mb-12">
           <h1 className="font-serif text-4xl sm:text-5xl mb-6">
             Juliette Madeline Tran
@@ -27,7 +27,7 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="grid grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-10">
           {photos.map((photo) => (
             <figure key={photo.src} className="bg-white p-2 pb-4 shadow-md">
               <Image
