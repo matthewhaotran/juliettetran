@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SaveButton from "./components/SaveButton";
 
 type Photo = { src: string; caption: string; width: number; height: number };
 
@@ -83,13 +84,7 @@ export default function Home() {
                 </a>
                 <figcaption className="mt-3 flex items-baseline justify-between gap-4 px-1 text-sm">
                   <span className="font-serif italic text-[#6d5b4c]">{photo.caption}</span>
-                  <a
-                    href={photo.src}
-                    download={fileName}
-                    className="shrink-0 text-[#9a7f68] hover:underline"
-                  >
-                    Download
-                  </a>
+                  <SaveButton src={photo.src} fileName={fileName} />
                 </figcaption>
               </figure>
             );
