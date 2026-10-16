@@ -54,7 +54,7 @@ export default function Home() {
     { src: "/beach_announcement.jpeg", caption: "Excited for Juliette to come!", width: 1536, height: 2048 },
     { src: "/beach_announcement_dad_gang.jpeg", caption: "baby announcement", width: 2048, height: 1365 },
     { src: "/ultrasound.jpeg", caption: "first ultrasound family photo", width: 1174, height: 875 },
-    { src: "/first_ultrasound.jpeg", caption: "first ultrasound", width: 2048, height: 1536 },
+    { src: "/first_ultrasound.jpeg", caption: "second ultrasound", width: 2048, height: 1536 },
   ];
 
   return (
