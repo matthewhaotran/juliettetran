@@ -1,57 +1,59 @@
 import Image from "next/image";
 
+type Photo = { src: string; caption: string; width: number; height: number };
+
 export default function Home() {
   // Newest photos go at the top of this list.
-  const photos = [
-    { src: "/photos/pro-01.jpg", caption: "Family in black and white" },
-    { src: "/photos/pro-02.jpg", caption: "Sleepy newborn on lace" },
-    { src: "/photos/pro-03.jpg", caption: "Tiny toes on lace" },
-    { src: "/photos/pro-04.jpg", caption: "Pink tutu dreams" },
-    { src: "/photos/pro-05.jpg", caption: "Sweet pink tutu" },
-    { src: "/photos/pro-06.jpg", caption: "Tiny foot in hand" },
-    { src: "/photos/pro-07.jpg", caption: "Pink flower headband" },
-    { src: "/photos/pro-08.jpg", caption: "Brown tutu and bow" },
-    { src: "/photos/pro-09.jpg", caption: "Happy little smile" },
-    { src: "/photos/pro-10.jpg", caption: "Sunshine yellow tutu" },
-    { src: "/photos/pro-11.jpg", caption: "Yawning close-up" },
-    { src: "/photos/pro-12.jpg", caption: "Peaceful sleep" },
-    { src: "/photos/pro-13.jpg", caption: "Dreaming on the moon" },
-    { src: "/photos/pro-14.jpg", caption: "Moon pillow nap" },
-    { src: "/photos/pro-15.jpg", caption: "Stars and moon" },
-    { src: "/photos/pro-16.jpg", caption: "A mother's kiss" },
-    { src: "/photos/pro-17.jpg", caption: "Our little family" },
-    { src: "/photos/pro-18.jpg", caption: "Family cuddles" },
-    { src: "/photos/pro-19.jpg", caption: "Daddy's gentle hold" },
-    { src: "/photos/pro-20.jpg", caption: "Cuddles with mom and dad" },
-    { src: "/photos/pro-21.jpg", caption: "Forehead kiss" },
-    { src: "/photos/pro-22.jpg", caption: "Pink crib dreams" },
-    { src: "/photos/pro-23.jpg", caption: "Hospital window snuggles" },
-    { src: "/photos/pro-24.jpg", caption: "Hello, world" },
-    { src: "/photos/pro-25.jpg", caption: "Sweet kiss at the window" },
-    { src: "/photos/pro-26.jpg", caption: "Proud parents" },
-    { src: "/photos/pro-27.jpg", caption: "Holding our girl" },
-    { src: "/photos/pro-28.jpg", caption: "Mom's sweet cuddle" },
-    { src: "/photos/pro-29.jpg", caption: "Dad's big smile" },
-    { src: "/photos/pro-30.jpg", caption: "Mom's first kiss" },
-    { src: "/photos/pro-31.jpg", caption: "Hello, Juliette" },
-    { src: "/photos/pro-32.jpg", caption: "Nose to nose" },
-    { src: "/photos/pro-33.jpg", caption: "Tucked in tight" },
-    { src: "/photos/pro-34.jpg", caption: "Sleeping beauty" },
-    { src: "/photos/pro-35.jpg", caption: "Dad's sweet hold" },
-    { src: "/photos/pro-36.jpg", caption: "Welcome to the world" },
-    { src: "/photos/pro-37.jpg", caption: "Sleepy in striped bow" },
-    { src: "/photos/pro-38.jpg", caption: "Soft newborn cheeks" },
-    { src: "/photos/pro-39.jpg", caption: "Footprint swaddle" },
-    { src: "/photos/pro-40.jpg", caption: "Birth announcement sign" },
-    { src: "/photos/pro-41.jpg", caption: "Timeless black and white" },
-    { src: "/newborn_mom_cuddle.jpeg", caption: "first photo ever" },
-    { src: "/newborn_family_selfie.jpeg", caption: "first family photo" },
-    { src: "/newborn_dad_holding.jpeg", caption: "first photo with dad" },
-    { src: "/announcement_cookies.jpeg", caption: "baby shower cookies" },
-    { src: "/beach_announcement.jpeg", caption: "Excited for Juliette to come!" },
-    { src: "/beach_announcement_dad_gang.jpeg", caption: "baby announcement" },
-    { src: "/ultrasound.jpeg", caption: "first ultrasound family photo" },
-    { src: "/first_ultrasound.jpeg", caption: "first ultrasound" },
+  const photos: Photo[] = [
+    { src: "/photos/pro-01.jpg", caption: "Family in black and white", width: 1064, height: 1600 },
+    { src: "/photos/pro-02.jpg", caption: "Sleepy newborn on lace", width: 1600, height: 1101 },
+    { src: "/photos/pro-03.jpg", caption: "Tiny toes on lace", width: 1600, height: 1064 },
+    { src: "/photos/pro-04.jpg", caption: "Pink tutu dreams", width: 1600, height: 1064 },
+    { src: "/photos/pro-05.jpg", caption: "Sweet pink tutu", width: 1600, height: 1166 },
+    { src: "/photos/pro-06.jpg", caption: "Tiny foot in hand", width: 1600, height: 1064 },
+    { src: "/photos/pro-07.jpg", caption: "Pink flower headband", width: 1600, height: 1064 },
+    { src: "/photos/pro-08.jpg", caption: "Brown tutu and bow", width: 1600, height: 1125 },
+    { src: "/photos/pro-09.jpg", caption: "Happy little smile", width: 1600, height: 1075 },
+    { src: "/photos/pro-10.jpg", caption: "Sunshine yellow tutu", width: 1600, height: 1093 },
+    { src: "/photos/pro-11.jpg", caption: "Yawning close-up", width: 1600, height: 1107 },
+    { src: "/photos/pro-12.jpg", caption: "Peaceful sleep", width: 1600, height: 1146 },
+    { src: "/photos/pro-13.jpg", caption: "Dreaming on the moon", width: 1600, height: 1081 },
+    { src: "/photos/pro-14.jpg", caption: "Moon pillow nap", width: 1600, height: 1076 },
+    { src: "/photos/pro-15.jpg", caption: "Stars and moon", width: 1600, height: 1184 },
+    { src: "/photos/pro-16.jpg", caption: "A mother's kiss", width: 1064, height: 1600 },
+    { src: "/photos/pro-17.jpg", caption: "Our little family", width: 1064, height: 1600 },
+    { src: "/photos/pro-18.jpg", caption: "Family cuddles", width: 1064, height: 1600 },
+    { src: "/photos/pro-19.jpg", caption: "Daddy's gentle hold", width: 1064, height: 1600 },
+    { src: "/photos/pro-20.jpg", caption: "Cuddles with mom and dad", width: 1064, height: 1600 },
+    { src: "/photos/pro-21.jpg", caption: "Forehead kiss", width: 1600, height: 1064 },
+    { src: "/photos/pro-22.jpg", caption: "Pink crib dreams", width: 1600, height: 1091 },
+    { src: "/photos/pro-23.jpg", caption: "Hospital window snuggles", width: 1600, height: 1066 },
+    { src: "/photos/pro-24.jpg", caption: "Hello, world", width: 1600, height: 1066 },
+    { src: "/photos/pro-25.jpg", caption: "Sweet kiss at the window", width: 1600, height: 1066 },
+    { src: "/photos/pro-26.jpg", caption: "Proud parents", width: 1600, height: 1066 },
+    { src: "/photos/pro-27.jpg", caption: "Holding our girl", width: 1066, height: 1600 },
+    { src: "/photos/pro-28.jpg", caption: "Mom's sweet cuddle", width: 1066, height: 1600 },
+    { src: "/photos/pro-29.jpg", caption: "Dad's big smile", width: 1066, height: 1600 },
+    { src: "/photos/pro-30.jpg", caption: "Mom's first kiss", width: 1066, height: 1600 },
+    { src: "/photos/pro-31.jpg", caption: "Hello, Juliette", width: 1066, height: 1600 },
+    { src: "/photos/pro-32.jpg", caption: "Nose to nose", width: 1066, height: 1600 },
+    { src: "/photos/pro-33.jpg", caption: "Tucked in tight", width: 1066, height: 1600 },
+    { src: "/photos/pro-34.jpg", caption: "Sleeping beauty", width: 1600, height: 1066 },
+    { src: "/photos/pro-35.jpg", caption: "Dad's sweet hold", width: 1066, height: 1600 },
+    { src: "/photos/pro-36.jpg", caption: "Welcome to the world", width: 1600, height: 1066 },
+    { src: "/photos/pro-37.jpg", caption: "Sleepy in striped bow", width: 1066, height: 1600 },
+    { src: "/photos/pro-38.jpg", caption: "Soft newborn cheeks", width: 1066, height: 1600 },
+    { src: "/photos/pro-39.jpg", caption: "Footprint swaddle", width: 1066, height: 1600 },
+    { src: "/photos/pro-40.jpg", caption: "Birth announcement sign", width: 1066, height: 1600 },
+    { src: "/photos/pro-41.jpg", caption: "Timeless black and white", width: 1064, height: 1600 },
+    { src: "/newborn_mom_cuddle.jpeg", caption: "first photo ever", width: 1536, height: 2048 },
+    { src: "/newborn_family_selfie.jpeg", caption: "first family photo", width: 1536, height: 2048 },
+    { src: "/newborn_dad_holding.jpeg", caption: "first photo with dad", width: 1536, height: 2048 },
+    { src: "/announcement_cookies.jpeg", caption: "baby shower cookies", width: 2048, height: 1536 },
+    { src: "/beach_announcement.jpeg", caption: "Excited for Juliette to come!", width: 1536, height: 2048 },
+    { src: "/beach_announcement_dad_gang.jpeg", caption: "baby announcement", width: 2048, height: 1365 },
+    { src: "/ultrasound.jpeg", caption: "first ultrasound family photo", width: 1174, height: 875 },
+    { src: "/first_ultrasound.jpeg", caption: "first ultrasound", width: 2048, height: 1536 },
   ];
 
   return (
@@ -64,20 +66,34 @@ export default function Home() {
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-10">
-          {photos.map((photo) => (
-            <figure key={photo.src} className="bg-white p-2 pb-4 shadow-md">
-              <Image
-                src={photo.src}
-                alt={photo.caption}
-                width={400}
-                height={400}
-                className="w-full h-auto aspect-square object-cover"
-              />
-              <figcaption className="mt-3 text-center font-serif italic text-sm text-[#6d5b4c]">
-                {photo.caption}
-              </figcaption>
-            </figure>
-          ))}
+          {photos.map((photo) => {
+            const ext = photo.src.slice(photo.src.lastIndexOf("."));
+            const fileName = `${photo.caption.toLowerCase().replace(/[^a-z0-9]+/g, "-")}${ext}`;
+
+            return (
+              <figure key={photo.src} className="bg-white p-2 pb-4 shadow-md">
+                <a href={photo.src} target="_blank" rel="noopener noreferrer" className="block">
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    width={photo.width}
+                    height={photo.height}
+                    className="w-full h-auto"
+                  />
+                </a>
+                <figcaption className="mt-3 flex items-baseline justify-between gap-4 px-1 text-sm">
+                  <span className="font-serif italic text-[#6d5b4c]">{photo.caption}</span>
+                  <a
+                    href={photo.src}
+                    download={fileName}
+                    className="shrink-0 text-[#9a7f68] hover:underline"
+                  >
+                    Download
+                  </a>
+                </figcaption>
+              </figure>
+            );
+          })}
         </div>
       </main>
     </div>
